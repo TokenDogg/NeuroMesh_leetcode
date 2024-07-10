@@ -5,7 +5,7 @@ def brackets_checker(source):
     for i in range(len(source)):
         if source[i] == '(':
             output[i] = ' '
-            stack.append(i)
+            stack.insert(0, i)
         elif source[i] == ')':
             if len(stack) == 0:
                 output[i] = '?'
